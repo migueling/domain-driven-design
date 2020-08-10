@@ -18,6 +18,7 @@ configurations {
 }
 
 dependencies {
+    testAnnotationProcessor "io.micronaut:micronaut-inject-java"
     annotationProcessor(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     annotationProcessor("io.micronaut:micronaut-inject-java")
     annotationProcessor("io.micronaut:micronaut-validation")
@@ -35,6 +36,9 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testImplementation("io.micronaut.test:micronaut-test-junit5")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+    testCompile "io.micronaut.test:micronaut-test-junit5:1.2.2"
+    testCompile "org.mockito:mockito-junit-jupiter:2.22.0"
+    testRuntime "org.junit.jupiter:junit-jupiter-engine:5.1.0"
 }
 
 test.classpath += configurations.developmentOnly
