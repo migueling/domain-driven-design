@@ -30,7 +30,8 @@ class InMemoryProductRepositoryTest {
 
     @Test
     public void newRepositoryStartsEmpty() {
-        List<Product> products = inMemoryProductRepository.getAll();
+        ProductRepository inMemory = new InMemoryProductRepository();
+        List<Product> products = inMemory.getAll();
         assertTrue(products.isEmpty());
     }
 
