@@ -7,11 +7,15 @@ public class Product {
     private Sku sku;
     private String name;
 
+    private Product() {
+        // we don't want products to be created without using our factory method.
+    }
+
     public Sku getSku() {
         return sku;
     }
 
-    public void setSku(Sku sku) {
+    private void setSku(Sku sku) {
         this.sku = sku;
     }
 
@@ -20,6 +24,15 @@ public class Product {
     }
 
     public void setName(String name) {
+
+        if(name == null) {
+            throw new RuntimeException("Name cannot be null");
+        }
+
+        if(name.isBlank()) {
+            throw new RuntimeException("Name cannot be blank");
+        }
+
         this.name = name;
     }
 
