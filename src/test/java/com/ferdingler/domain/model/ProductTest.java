@@ -18,18 +18,32 @@ class ProductTest {
 
     @Test
     public void newProductHasName() {
-        assertEquals("Banana", product.getName());
+        assertEquals("Banana", this.product.getName());
     }
 
     @Test
     public void newProductHasSku() {
-        Sku sku = product.getSku();
+        Sku sku = this.product.getSku();
         assertFalse(sku.getValue().isBlank());
     }
 
     @Test
     public void newProductHasCategory() {
-        Category category = product.getCategory();
+        Category category = this.product.getCategory();
         assertEquals("Electronics", category.getName());
     }
+
+    public void nameCannotBeBlank() {
+        assertThrows(RuntimeException.class, () -> {
+            this.product.setName("");
+        });
+    }
+
+    @Test
+    public void nameCannotBeNull() {
+        assertThrows(RuntimeException.class, () -> {
+            this.product.setName(null);
+        });
+    }
+
 }
