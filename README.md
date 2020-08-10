@@ -4,8 +4,7 @@ This project contains the backend for an e-commerce product catalog.
 
 ## Domain Model
 
-The domain model is very simple. The catalog has _Products_ and each 
-product has a _name_ and a unique identifier _Sku_.   
+Each _Product_ in the catalog has a _name_ and a unique identifier _Sku_. 
 
 ### Entities
 
