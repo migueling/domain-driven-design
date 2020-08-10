@@ -24,6 +24,8 @@ class CatalogApplicationTest {
     public void createProductCallsSaveMethodOnRepository() {
         CreateProductRequest request = new CreateProductRequest();
         request.setProductName("Banana");
+        request.setCategoryName("Books");
+
         catalogApplication.createProduct(request);
         verify(productRepository).save(any());
     }

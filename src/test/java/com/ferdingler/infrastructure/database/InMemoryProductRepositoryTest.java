@@ -21,7 +21,7 @@ class InMemoryProductRepositoryTest {
 
     @Test
     public void saveAddsProduct() {
-        Product product = Product.buildNewProduct("My Product");
+        Product product = Product.buildNewProduct("My Product", "My Category");
         inMemoryProductRepository.save(product);
 
         List<Product> products = inMemoryProductRepository.getAll();

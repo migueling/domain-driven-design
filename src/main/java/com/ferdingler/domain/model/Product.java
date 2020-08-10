@@ -6,6 +6,7 @@ public class Product {
 
     private Sku sku;
     private String name;
+    private Category category;
 
     public Sku getSku() {
         return sku;
@@ -23,9 +24,18 @@ public class Product {
         this.name = name;
     }
 
-    public static Product buildNewProduct(String name) {
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public static Product buildNewProduct(String name, String category) {
         Product product = new Product();
         product.setName(name);
+        product.setCategory(new Category(category));
         product.setSku(new Sku(UUID.randomUUID().toString()));
         return product;
     }

@@ -4,6 +4,7 @@ public class ProductInfo {
 
     private String sku;
     private String productName;
+    private String category;
 
     public String getSku() {
         return sku;
@@ -19,5 +20,13 @@ public class ProductInfo {
 
     public void setProductName(String productName) {
         this.productName = productName;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
