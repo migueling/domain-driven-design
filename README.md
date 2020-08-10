@@ -1,16 +1,6 @@
-## Domain Driven Design - Lab
+# Domain Driven Design - Lab
 
-**Goal**  
-Design the backend of a product catalog for an e-commerce store.
+Design the backend for an e-commerce product catalog.
 
-### Domain Model
-A catalog has a list of products which are organized by 
-categories (electronics, clothing, food, books, etc).
 
-Entities:
-- Products
-
-Value Objects
-- Category
-- BrandName
 
