@@ -4,6 +4,7 @@ import com.ferdingler.domain.model.Product;
 import com.ferdingler.domain.model.Sku;
 import com.ferdingler.domain.services.ShoppingCart;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MemoryShoppingCart implements ShoppingCart {
@@ -24,7 +25,7 @@ public class MemoryShoppingCart implements ShoppingCart {
 
     @Override
     public List<Product> getProducts() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override
