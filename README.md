@@ -4,7 +4,7 @@
 
 There is a new feature on the Product catalog that allows customers to add 
 or remove products from a shopping cart and then calculate the total checkout
-cost of their cart. You need to write the in-memory implementation of the ShoppingCart 
+cost. You need to write the in-memory implementation of the ShoppingCart 
 service.  
 
 The interface has already been defined in the domain services package and the 

@@ -8,6 +8,10 @@ import java.util.List;
 
 public class MemoryShoppingCart implements ShoppingCart {
 
+    /**
+     * Note: A maximum of 10 products should be allowed in the cart.
+     * Throw an exception if more than 10 products are added.
+     */
     @Override
     public void addProduct(Product product) {
 
@@ -24,7 +28,7 @@ public class MemoryShoppingCart implements ShoppingCart {
     }
 
     @Override
-    public double getCheckoutTotal() {
+    public double calculateCheckoutTotal() {
         return 0;
     }
 }
