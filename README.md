@@ -1,26 +1,15 @@
-# Lab 1
+# Lab 2 - TDD
 
-You have been tasked to add a new feature to the e-commerce catalog to 
-allow products to be organized into _Categories_. You are given the following
-business requirements:
+This lab is divided in two parts, the goal is to apply Domain Driven Design and 
+Test Driven Development to solve them.
 
-- A product belongs to a single _Category_.
-- A product must always be part of a _Category_.
-- A _Category_ is identified by its name (i.e. Electronics, Clothing, Books).
-- A _Category_ name must not be blank. 
+## Part 1 - ShoppingCart
 
-## Open Questions
+Write the implementation of the ShoppingCart service to allow for 
+products to be added and removed from the cart as well as to calculate
+the total checkout cost.   
 
-- Should the _Category_ object be an Entity or a Value Object? 
-- Do you need a Category repository? 
-
-## Your tasks
-
-- Add _Category_ to the domain model.
-- Update the _Product_ model so each product has a _Category_.
-- Update the `CreateProductRequest` object to include _categoryName_.
-- Update the `ProductInfo` object to include _categoryName_.
-
+## Part 2
 
 
 

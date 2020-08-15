@@ -42,6 +42,7 @@ class CatalogApiTest {
         CreateProductRequest request = new CreateProductRequest();
         request.setProductName("Banana");
         request.setCategoryName("Books");
+        request.setPrice(100);
 
         catalogApi.createProduct(request);
         verify(catalogApplication).createProduct(request);

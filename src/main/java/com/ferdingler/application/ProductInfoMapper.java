@@ -9,6 +9,7 @@ public class ProductInfoMapper {
         ProductInfo productInfo = new ProductInfo();
         productInfo.setProductName(product.getName());
         productInfo.setSku(product.getSku().getValue());
+        productInfo.setPrice(product.getPrice().getValue());
         productInfo.setCategory(product.getCategory().getName());
         return productInfo;
     }

@@ -20,7 +20,7 @@ public class CatalogApplication {
     }
 
     public void createProduct(CreateProductRequest request) {
-        Product product = Product.buildNewProduct(request.getProductName(), request.getCategoryName());
+        Product product = Product.buildNewProduct(request.getProductName(), request.getCategoryName(), request.getPrice());
         productRepository.save(product);
     }
 

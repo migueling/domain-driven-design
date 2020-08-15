@@ -2,6 +2,7 @@ package com.ferdingler.application;
 
 import com.ferdingler.api.ProductInfo;
 import com.ferdingler.domain.model.Category;
+import com.ferdingler.domain.model.Price;
 import com.ferdingler.domain.model.Product;
 import com.ferdingler.domain.model.Sku;
 import io.micronaut.test.annotation.MicronautTest;
@@ -18,7 +19,7 @@ class ProductInfoMapperTest {
 
     @BeforeEach
     void setUp() {
-        this.product = Product.buildNewProduct("Banana", "Books");
+        this.product = Product.buildNewProduct("Banana", "Books", 100);
         this.productInfo = ProductInfoMapper.map(product);
     }
 
@@ -35,8 +36,12 @@ class ProductInfoMapperTest {
 
     @Test
     public void mapsProductCategory() {
-        Category category = this.product.getCategory();
         assertEquals("Books", productInfo.getCategory());
+    }
+
+    @Test
+    public void mapsProductPrice() {
+        assertEquals(100, productInfo.getPrice());
     }
 
 }

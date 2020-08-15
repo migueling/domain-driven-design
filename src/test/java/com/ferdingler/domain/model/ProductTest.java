@@ -13,7 +13,7 @@ class ProductTest {
 
     @BeforeEach
     void setUp() {
-        this.product = Product.buildNewProduct("Banana", "Electronics");
+        this.product = Product.buildNewProduct("Banana", "Electronics", 50);
     }
 
     @Test
@@ -33,6 +33,7 @@ class ProductTest {
         assertEquals("Electronics", category.getName());
     }
 
+    @Test
     public void nameCannotBeBlank() {
         assertThrows(RuntimeException.class, () -> {
             this.product.setName("");
