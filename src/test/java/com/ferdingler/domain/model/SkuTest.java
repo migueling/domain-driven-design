@@ -36,4 +36,10 @@ class SkuTest {
         assertEquals("123", sku.getValue());
     }
 
+    @Test
+    public void twoSkusWithSameValueAreEqual() {
+        Sku one = new Sku("123");
+        Sku two = new Sku("123");
+        assertEquals(one, two);
+    }
 }
