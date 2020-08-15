@@ -1,6 +1,7 @@
 package com.ferdingler.domain.model;
 
 import java.util.Objects;
+import java.util.UUID;
 
 public class Sku {
 
@@ -20,6 +21,28 @@ public class Sku {
 
     public String getValue() {
         return this.value;
+    }
+
+    /**
+     * Lab Part 2
+     *
+     * Modify this method to receive 2 new parameters: ProductName and Category.
+     * It should generate a new SKU with the following format:
+     *
+     * {First 4 letters of category}-{First 10 letters of product}-{5 random digits}.
+     * All uppercase and no spaces allowed.
+     *
+     * For example
+     *
+     * Input:
+     * ProductName = Mechanic Keyboard
+     * Category: Computer Devices
+     *
+     * Output:
+     * COMP-MECHANICKE-48711
+     */
+    public static Sku generate() {
+        return new Sku(UUID.randomUUID().toString());
     }
 
     @Override

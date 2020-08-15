@@ -59,7 +59,7 @@ public class Product {
         product.setName(name);
         product.setCategory(new Category(category));
         product.setPrice(new Price(price));
-        product.setSku(new Sku(UUID.randomUUID().toString()));
+        product.setSku(Sku.generate());
         return product;
     }
 }
