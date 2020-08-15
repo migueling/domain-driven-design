@@ -29,6 +29,11 @@ public class MemoryShoppingCart implements ShoppingCart {
     }
 
     @Override
+    public int getCartSize() {
+        return 0;
+    }
+
+    @Override
     public double calculateCheckoutTotal() {
         return 0;
     }

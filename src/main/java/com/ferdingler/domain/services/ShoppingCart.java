@@ -10,6 +10,7 @@ public interface ShoppingCart {
     void addProduct(Product product);
     void removeProduct(Sku sku);
     List<Product> getProducts();
+    int getCartSize();
     double calculateCheckoutTotal();
 
 }
