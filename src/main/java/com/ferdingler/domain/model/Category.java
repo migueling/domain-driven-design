@@ -15,15 +15,19 @@ public class Category {
     private String name;
 
     public Category(String name) {
+        if (name == null) {
+            throw new RuntimeException("Category name must not be null");
+        }
+
+        if (name.isBlank() || name.isEmpty()) {
+            throw new RuntimeException("Category name must not be blank");
+        }
+
         this.name = name;
     }
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     /**
