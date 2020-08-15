@@ -7,6 +7,14 @@ public class Sku {
     private final String value;
 
     public Sku(String value) {
+        if(value == null){
+            throw new RuntimeException("A sku cannot be null");
+        }
+
+        if(value.isEmpty() || value.isBlank()){
+            throw new RuntimeException("A sku cannot be empty");
+        }
+
         this.value = value;
     }
 
