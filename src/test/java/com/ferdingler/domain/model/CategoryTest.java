@@ -35,4 +35,11 @@ class CategoryTest {
         assertEquals("Electronics", category.getName());
     }
 
+    @Test
+    public void twoCategoriesWithSameNameAreEqual() {
+        Category one = new Category("Electronics");
+        Category two = new Category("Electronics");
+        assertEquals(one, two);
+    }
+
 }
