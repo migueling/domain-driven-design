@@ -26,8 +26,8 @@ public class Sku {
     /**
      * Lab Part 2
      *
-     * Modify this method to receive 2 new parameters: ProductName and Category.
-     * It should generate a new SKU with the following format:
+     * Modify this method to generate a Sku based on ProductName and Category.
+     * The format of the generated sku should be as follows:
      *
      * {First 4 letters of category}-{First 10 letters of product}-{5 random digits}.
      * All uppercase and no spaces allowed.
@@ -41,6 +41,10 @@ public class Sku {
      * Output:
      * COMP-MECHANICKE-48711
      */
+    public static Sku generate(Category category, String productName) {
+        return new Sku(UUID.randomUUID().toString());
+    }
+
     public static Sku generate() {
         return new Sku(UUID.randomUUID().toString());
     }
