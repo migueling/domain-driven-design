@@ -56,10 +56,11 @@ public class Product {
 
     public static Product buildNewProduct(String name, String category, double price) {
         Product product = new Product();
+        Category cat = new Category(category);
         product.setName(name);
-        product.setCategory(new Category(category));
+        product.setCategory(cat);
         product.setPrice(new Price(price));
-        product.setSku(Sku.generate());
+        product.setSku(Sku.generate(cat, name));
         return product;
     }
 }

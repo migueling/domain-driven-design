@@ -1,6 +1,7 @@
 package com.ferdingler.domain.model;
 
 import java.util.Objects;
+import java.util.Random;
 import java.util.UUID;
 
 public class Sku {
@@ -42,7 +43,33 @@ public class Sku {
      * COMP-MECHANICKE-48711
      */
     public static Sku generate(Category category, String productName) {
-        return new Sku(UUID.randomUUID().toString());
+
+        int MAX_CATEGORY_PREFIX_SIZE = 4;
+        int MAX_PRODUCT_NAME_SIZE = 10;
+
+        StringBuilder skuBuilder = new StringBuilder();
+        String prefix = category.getName().replace(" ", "");
+        String productStr = productName.replace(" ", "");
+
+        if (productStr.length() >= MAX_PRODUCT_NAME_SIZE) {
+            productStr = productStr.substring(0, MAX_PRODUCT_NAME_SIZE);
+        }
+
+        if(prefix.length() >= MAX_CATEGORY_PREFIX_SIZE) {
+            prefix = prefix.substring(0, MAX_CATEGORY_PREFIX_SIZE);
+        }
+
+        Random random = new Random();
+        String digits = String.valueOf(10000 + random.nextInt(90000));
+
+        skuBuilder
+                .append(prefix)
+                .append("-")
+                .append(productStr)
+                .append("-")
+                .append(digits);
+
+        return new Sku(skuBuilder.toString().toUpperCase());
     }
 
     public static Sku generate() {
