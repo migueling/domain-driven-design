@@ -13,8 +13,8 @@ empty implementation is in the infrastructure package.
 ## Part 2 - Sku Generation
 
 Your job is to implement a new mechanism to generate product _Skus_ based on the product name
-and category. There is a new method in the _Sku_ class that you need to 
-modify to do this excercise. Use Test Driven Development to do implement the new
+and category. There is a new method in the _Sku_ class named `generate` that you need to 
+modify to do this excercise. Use Test Driven Development to implement the new
 behavior of Sku generation. 
 
 Example sku generation:   
