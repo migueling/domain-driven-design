@@ -11,3 +11,5 @@ What other domain objects would you introduce?
 What design patterns could you leverage?   
 Can you make your design open for extension to new discount schemes?  
 
+Modify the _ShoppingCart.calculateCheckoutTotal_ method to consider discounts
+while calculating the total amount to pay.

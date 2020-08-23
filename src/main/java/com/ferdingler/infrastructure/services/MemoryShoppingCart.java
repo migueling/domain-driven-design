@@ -12,14 +12,6 @@ public class MemoryShoppingCart implements ShoppingCart {
     private final int MAX_PRODUCTS = 10;
     private final List<Product> products;
 
-    public MemoryShoppingCart() {
-        this.products = new ArrayList<>();
-    }
-
-    /**
-     * Note: A maximum of 10 products should be allowed in the cart.
-     * Throw an exception if more than 10 products are added.
-     */
     @Override
     public void addProduct(Product product) {
         if(products.size() >= MAX_PRODUCTS) {
@@ -27,6 +19,10 @@ public class MemoryShoppingCart implements ShoppingCart {
         }
 
         products.add(product);
+    }
+
+    public MemoryShoppingCart() {
+        this.products = new ArrayList<>();
     }
 
     @Override
