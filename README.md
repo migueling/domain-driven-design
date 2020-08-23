@@ -1,6 +1,7 @@
 # Domain Driven Design - Lab
 
-This project contains the backend for an e-commerce product catalog. 
+This project contains the backend for an e-commerce website.
+At the moment it only contains a product catalog. 
 
 ## Domain Model
 
