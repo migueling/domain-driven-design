@@ -24,24 +24,6 @@ public class Sku {
         return this.value;
     }
 
-    /**
-     * Lab Part 2
-     *
-     * Modify this method to generate a Sku based on ProductName and Category.
-     * The format of the generated sku should be as follows:
-     *
-     * {First 4 letters of category}-{First 10 letters of product}-{5 random digits}.
-     * All uppercase and no spaces allowed.
-     *
-     * For example
-     *
-     * Input:
-     * ProductName = Mechanic Keyboard
-     * Category: Computer Devices
-     *
-     * Output:
-     * COMP-MECHANICKE-48711
-     */
     public static Sku generate(Category category, String productName) {
 
         int MAX_CATEGORY_PREFIX_SIZE = 4;
