@@ -1,7 +1,5 @@
 package com.ferdingler.domain.model;
 
-import java.util.UUID;
-
 public class Product {
 
     private Sku sku;
