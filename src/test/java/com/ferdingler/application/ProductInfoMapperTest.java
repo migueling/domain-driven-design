@@ -1,13 +1,12 @@
 package com.ferdingler.application;
 
 import com.ferdingler.api.ProductInfo;
-import com.ferdingler.domain.model.Category;
-import com.ferdingler.domain.model.Price;
-import com.ferdingler.domain.model.Product;
-import com.ferdingler.domain.model.Sku;
+import com.ferdingler.domain.model.*;
 import io.micronaut.test.annotation.MicronautTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import javax.inject.Inject;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -17,9 +16,12 @@ class ProductInfoMapperTest {
     private Product product;
     private ProductInfo productInfo;
 
+    @Inject
+    ProductFactory productFactory;
+
     @BeforeEach
     void setUp() {
-        this.product = Product.buildNewProduct("Banana", "Books", 100);
+        this.product = productFactory.buildNewProduct("Banana", "Books", 100);
         this.productInfo = ProductInfoMapper.map(product);
     }
 

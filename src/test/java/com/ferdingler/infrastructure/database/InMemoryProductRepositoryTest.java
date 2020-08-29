@@ -1,6 +1,7 @@
 package com.ferdingler.infrastructure.database;
 
 import com.ferdingler.domain.model.Product;
+import com.ferdingler.domain.model.ProductFactory;
 import com.ferdingler.domain.model.ProductRepository;
 import io.micronaut.test.annotation.MicronautTest;
 import org.junit.jupiter.api.Test;
@@ -19,9 +20,12 @@ class InMemoryProductRepositoryTest {
     @Named("InMemory")
     ProductRepository inMemoryProductRepository;
 
+    @Inject
+    ProductFactory productFactory;
+
     @Test
     public void saveAddsProduct() {
-        Product product = Product.buildNewProduct("My Product", "My Category", 10);
+        Product product = productFactory.buildNewProduct("My Product", "My Category", 10);
         inMemoryProductRepository.save(product);
 
         List<Product> products = inMemoryProductRepository.getAll();

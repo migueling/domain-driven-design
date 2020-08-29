@@ -2,11 +2,13 @@ package com.ferdingler.infrastructure.services;
 
 import com.ferdingler.domain.model.Price;
 import com.ferdingler.domain.model.Product;
+import com.ferdingler.domain.model.ProductFactory;
 import com.ferdingler.domain.services.ShoppingCart;
 import io.micronaut.test.annotation.MicronautTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.inject.Inject;
 import java.util.List;
 import java.util.Random;
 
@@ -18,13 +20,16 @@ class MemoryShoppingCartTest {
     private Product product;
     private ShoppingCart cart;
 
+    @Inject
+    ProductFactory productFactory;
+
     @BeforeEach
     void setUp() {
         this.cart = new MemoryShoppingCart();
     }
 
     Product randomProduct() {
-        return Product.buildNewProduct(
+        return productFactory.buildNewProduct(
                 "Dog Food",
                 "Pet Supplies",
                 5

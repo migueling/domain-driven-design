@@ -1,5 +1,8 @@
 package com.ferdingler.domain.model;
 
+import com.ferdingler.infrastructure.config.FeatureFlags;
+import io.micronaut.context.ApplicationContext;
+
 public class Product {
 
     private Sku sku;
@@ -7,7 +10,7 @@ public class Product {
     private Category category;
     private Price price;
 
-    private Product() {
+    public Product() {
         // we don't want products to be created without using our factory method.
     }
 
@@ -15,7 +18,7 @@ public class Product {
         return sku;
     }
 
-    private void setSku(Sku sku) {
+    public void setSku(Sku sku) {
         this.sku = sku;
     }
 
@@ -50,15 +53,5 @@ public class Product {
 
     public void setPrice(Price price) {
         this.price = price;
-    }
-
-    public static Product buildNewProduct(String name, String category, double price) {
-        Product product = new Product();
-        Category cat = new Category(category);
-        product.setName(name);
-        product.setCategory(cat);
-        product.setPrice(new Price(price));
-        product.setSku(Sku.generate(cat, name));
-        return product;
     }
 }

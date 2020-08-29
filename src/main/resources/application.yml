@@ -3,4 +3,5 @@ micronaut:
     name: katas
 
 flags:
-  productRepository: 'InMemory'
+  productRepository: 'Hardcoded'
+  skuGenerationStrategy: 'Legacy'

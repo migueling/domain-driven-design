@@ -4,6 +4,8 @@ import io.micronaut.test.annotation.MicronautTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.inject.Inject;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @MicronautTest
@@ -11,9 +13,12 @@ class ProductTest {
 
     private Product product;
 
+    @Inject
+    private ProductFactory productFactory;
+
     @BeforeEach
     void setUp() {
-        this.product = Product.buildNewProduct("Banana", "Electronics", 50);
+        this.product = productFactory.buildNewProduct("Banana", "Electronics", 50);
     }
 
     @Test
