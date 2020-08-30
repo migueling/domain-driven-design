@@ -1,4 +1,4 @@
-# Lab 1
+# Lab 1 - DDD
 
 You have been tasked to add a new feature to the e-commerce catalog to 
 allow products to be organized into _Categories_. You are given the following
