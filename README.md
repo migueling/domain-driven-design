@@ -1,4 +1,4 @@
-# Lab 3
+# Lab 3 - Homework
 
 Implement the concept of _Discounts_ in a flexible enough model to deal with various discount schemes such as: 
 
