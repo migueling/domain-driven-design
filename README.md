@@ -1,4 +1,4 @@
-# Lab 2
+# Lab 2 - TDD
 
 ## Part 1 - ShoppingCart
 
