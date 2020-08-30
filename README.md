@@ -13,14 +13,12 @@ business requirements:
 - Should the _Category_ object be an Entity or a Value Object? 
 - Do you need a Category repository? 
 
-## Your tasks
+## Your tasks   
 
 - Add _Category_ to the domain model.
 - Update the _Product_ model so each product has a _Category_.
-- Update the `createProduct` method in the CatalogApi to receive 
-_CategoryName_ as part of the create product request.
-- Update the `listProducts` method in the CatalogApi to return
-_CategoryName_ as part of each product information.     
+- Update the `CreateProductRequest` object to include _categoryName_.
+- Update the `ProductInfo` object to include _categoryName_.
 
 
 
