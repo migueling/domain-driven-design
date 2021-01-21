@@ -21,5 +21,23 @@ business requirements:
 - Update the `ProductInfo` object to include _categoryName_.
 
 
+## Run locally
 
+1. Clone the project
+
+```
+git clone https://github.com/ferdingler/domain-driven-design.git
+```
+
+2. Switch to lab1 branch
+
+```
+git checkout lab1
+```
+
+3. Run the project locally
+
+```
+./gradlew run
+```
 
