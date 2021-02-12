@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ferdingler/domain-driven-design)
+
 # Domain Driven Design - Lab
 
 Theme: e-commerce website. 
